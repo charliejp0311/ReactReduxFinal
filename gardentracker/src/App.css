@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,6 +27,23 @@
 .App-link {
   color: #61dafb;
 }
+
+.garden {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 25px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+/* .plant {
+  height: auto;
+  width: auto; 
+  box-shadow: 10px 10px grey;
+  padding: 10px;
+  border-radius: 10px;
+} */
 
 @keyframes App-logo-spin {
   from {
