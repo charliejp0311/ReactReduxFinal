@@ -1,0 +1,2 @@
+class HarvestedPlant < ApplicationRecord
+end

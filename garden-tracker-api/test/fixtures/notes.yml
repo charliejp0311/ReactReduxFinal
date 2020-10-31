@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  note: MyString
+  plantId: 1
+  harvestedPlantId: 1
+  gardenId: 1
+  harvestId: 1
+
+two:
+  type: 
+  note: MyString
+  plantId: 1
+  harvestedPlantId: 1
+  gardenId: 1
+  harvestId: 1
