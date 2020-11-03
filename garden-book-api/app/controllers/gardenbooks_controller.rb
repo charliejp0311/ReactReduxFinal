@@ -1,6 +1,6 @@
 class GardenbooksController < ApplicationController
     def show
-        gb = Gardenbook.last
+        gb = Gardenbook.find_by(id: params[:id])
         render json: GardenbookSerializer.new(gb)
     end
 end
