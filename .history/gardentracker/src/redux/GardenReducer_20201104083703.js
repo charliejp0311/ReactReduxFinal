@@ -2,20 +2,8 @@ export default function garden (state = {
     plants: [],
     notes: []
 },action){
-    // console.log(action)
-    // debugger
+    console.log(action)
     switch (action.type) {
-        case 'SET_GARDENBOOK':
-            let plants = action.plants
-            let pl = []
-            plants.forEach(plant => {
-                pl.push(plant.attributes)
-            });
-            return {
-                ...state,
-                plants: pl
-            };
-
         case 'ADD_PLANT':
             return {
                 ...state,

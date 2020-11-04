@@ -4,7 +4,7 @@ export const startSetGardenbook = () => {
     return(dispatch, getState)=>{
         fetch('http://localhost:3001/plants')
             .then(resp=>resp.json())
-            .then(data=> dispatch(setGardenbook(data.data)))
+            .then(data=> dispatch(setGardenbook(data)))
     };
 };
 

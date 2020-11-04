@@ -9,8 +9,9 @@ export default function garden (state = {
             let plants = action.plants
             let pl = []
             plants.forEach(plant => {
-                pl.push(plant.attributes)
+                pl.push(plant)
             });
+            console.log(pl)
             return {
                 ...state,
                 plants: pl

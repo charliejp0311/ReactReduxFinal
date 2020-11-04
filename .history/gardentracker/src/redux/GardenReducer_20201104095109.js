@@ -11,6 +11,7 @@ export default function garden (state = {
             plants.forEach(plant => {
                 pl.push(plant.attributes)
             });
+            console.log(pl)
             return {
                 ...state,
                 plants: pl
