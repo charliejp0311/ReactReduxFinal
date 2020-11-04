@@ -1,7 +1,7 @@
 import {Component} from 'react';
 import '../App.css';
 import { connect } from 'react-redux';
-// import {startSetGardenbook} from '../redux/actions';
+import {startSetGardenbook} from '../redux/actions';
 import {Switch,Route} from 'react-router-dom';
 // import GardenbookContainer from './GardenbookContainer';
 // import NavBar from '../components/Navbar';
@@ -32,4 +32,4 @@ class App extends Component() {
 
 
 
-export default connect()(App);
+export default connect(null,{startSetGardenbook})(App);

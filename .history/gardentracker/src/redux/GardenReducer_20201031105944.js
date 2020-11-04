@@ -1,5 +1,5 @@
 export default function garden (state = {
-    plants: [],
+    plants: [{name: 'Tomato'},{name: 'Kamote'},{name: 'Jalapeno'},{name: 'Cucumber'}],
     harvest: [],
     notes: []
 },action){

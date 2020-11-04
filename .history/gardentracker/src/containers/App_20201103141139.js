@@ -1,9 +1,9 @@
 import {Component} from 'react';
 import '../App.css';
 import { connect } from 'react-redux';
-// import {startSetGardenbook} from '../redux/actions';
+import {startSetGardenbook} from '../redux/actions';
 import {Switch,Route} from 'react-router-dom';
-// import GardenbookContainer from './GardenbookContainer';
+import GardenbookContainer from './GardenbookContainer';
 // import NavBar from '../components/Navbar';
 
 class App extends Component() {
@@ -13,7 +13,7 @@ class App extends Component() {
   // };
 
   render(){
-    // console.log(this.props)
+    console.log(this.props)
     return (
       <div className="App">
           <header className="App-header">
@@ -21,7 +21,7 @@ class App extends Component() {
           </header>
           {/* <NavBar /> */}
         <Switch>
-          <Route exact path='/' /> 
+          <Route exact path='/' component={GardenbookContainer}/> 
           <Route exact path='/garden'/> 
           <Route exact path='/harvest' />
         </Switch>
@@ -32,4 +32,4 @@ class App extends Component() {
 
 
 
-export default connect()(App);
+export default connect(null,{startSetGardenbook})(App);
