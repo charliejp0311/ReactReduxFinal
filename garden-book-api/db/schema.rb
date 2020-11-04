@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2020_11_01_195839) do
   create_table "notes", force: :cascade do |t|
     t.integer "plant_id"
     t.integer "action_id"
+    t.integer "gardenbook_id"
     t.string "note"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -35,6 +36,7 @@ ActiveRecord::Schema.define(version: 2020_11_01_195839) do
     t.string "name"
     t.string "description"
     t.integer "gardenbook_id"
+    t.boolean "growing", default: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
