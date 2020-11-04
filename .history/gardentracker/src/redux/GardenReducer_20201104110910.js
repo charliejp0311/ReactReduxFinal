@@ -6,7 +6,7 @@ export default function garden (state = {
     // debugger
     switch (action.type) {
         case 'SET_GARDENBOOK':
-            // debugger
+            debugger
             let plants = action.book.relationships.plants
             let notes = action.book.relationships.notes
             console.log(plants)

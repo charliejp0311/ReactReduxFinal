@@ -8,10 +8,10 @@ export const startSetGardenbook = () => {
     };
 };
 
-export const setGardenbook = (book)=>{
+export const setGardenbook = (plants)=>{
     return{
         type: "SET_GARDENBOOK",
-        book
+        plants
     }
 }
 
