@@ -2,8 +2,6 @@ import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import  PlantForm  from "../components/PlantForm";
 import  PlantList  from "../components/PlantList";
-import { startAddPlant } from '../redux/actions'
-import {startSetGardenbook} from '../redux/actions';
 
 
 
@@ -38,7 +36,7 @@ class GardenContainer extends Component{
 
     handleSubmit=e=>{
         e.preventDefault();
-        debugger
+        // debugger
         this.props.startAddPlant(this.state)
         this.setState({
             ...this.state,
@@ -70,11 +68,11 @@ const mapStateToProps = state => {
     }
 }
 
-const mapDispatchToProps=dispatch=>{
-    return{
-        handleChange: ()=>{dispatch(this.props.handleChange())},
-        handleSubmit: ()=>{dispatch(this.props.handleSubmit())},
-    }
-}
+// const mapDispatchToProps=dispatch=>{
+//     return{
+//         handleChange: ()=>{dispatch(this.props.handleChange())},
+//         handleSubmit: ()=>{dispatch(this.props.handleSubmit())},
+//     }
+// }
 
-export default connect(mapStateToProps, {mapDispatchToProps, startAddPlant, startSetGardenbook})(GardenContainer);
+export default connect(mapStateToProps)(GardenContainer);

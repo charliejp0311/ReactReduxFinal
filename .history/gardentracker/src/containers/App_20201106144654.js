@@ -17,7 +17,7 @@ class App extends Component {
   };
 
   render(){
-    // console.log(this.props)
+    console.log(this.props)
     return (
       <div className="App">
           <header className="App-header">
@@ -25,14 +25,15 @@ class App extends Component {
           </header>
           <NavBar />
         <Switch>
-          <Route exact path='/' render={(props)=><GardenbookContainer {...props} handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>} /> 
-          <Route exact path='/garden' render={(props)=><GardenContainer {...props} handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>}/> 
-          <Route exact path='/harvest' render={(props)=><HarvestContainer {...props}/>}/>
-          <Route exact path='/plants/:id' render={(props)=><PlantContainer {...props} handleSubmit={this.handleSubmit} handleChange={this.handleChange} />}/>
+          <Route exact path='/' component={GardenbookContainer} /> 
+          <Route exact path='/garden' component={GardenContainer}/> 
+          <Route exact path='/harvest' component={HarvestContainer}/>
+          <Route exact path='/plants/:id' component={PlantContainer}/>
         </Switch>
       </div>
     );
   };
 }
+
 
 export default connect(null, {startSetGardenbook})(App);

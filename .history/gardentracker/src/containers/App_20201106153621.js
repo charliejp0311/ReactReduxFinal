@@ -11,13 +11,42 @@ import NavBar from '../components/Navbar';
 
 class App extends Component {
 
+  handleChange=e=>{
+    switch (e.target.name) {
+      case 'name':
+          this.setState({
+              ...this.state,
+              name: e.target.value
+          })
+          break;
+      case 'description':
+          this.setState({
+              ...this.state,
+              description: e.target.value
+          });
+          break;
+      default:
+          break;
+    };
+  };
+
+  handleSubmit=e=>{
+      e.preventDefault();
+      this.props.startAddPlant(this.state)
+      this.setState({
+          ...this.state,
+          name: "", 
+          description: "",
+      });
+      this.props.startSetGardenbook();
+  };
 
   componentDidMount(){
     this.props.startSetGardenbook();
   };
 
   render(){
-    // console.log(this.props)
+    console.log(this.props)
     return (
       <div className="App">
           <header className="App-header">
@@ -34,5 +63,11 @@ class App extends Component {
     );
   };
 }
+// const mapDispatchToProps=dispatch=>{
+//     return{
+//         handleChange: ()=>{dispatch(this.handleChange())},
+//         handleSubmit: ()=>{dispatch(this.handleSubmit())}
+//     }
+// }
 
 export default connect(null, {startSetGardenbook})(App);

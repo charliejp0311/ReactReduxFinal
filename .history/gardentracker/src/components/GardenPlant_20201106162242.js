@@ -9,7 +9,7 @@ class GardenPlant extends Component{
             <div>
                 <h3>{plant.name}</h3>
                 <p>{plant.description}</p>
-                <Link to={`/plants/${plant.id}`} >Update</Link>
+                <Link to={`/plant`} >Update</Link>
                 <Link to={`/plants/${plant.id}/delete`} >Delete</Link>
                 <Link to={`/plants/${plant.id}`} >Harvest</Link>
             </div>

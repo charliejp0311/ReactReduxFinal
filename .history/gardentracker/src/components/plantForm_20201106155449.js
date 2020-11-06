@@ -1,12 +1,12 @@
 import React,{Component} from "react";
 import { connect } from "react-redux";
-// import { startAddPlant } from '../redux/actions'
-// import {startSetGardenbook} from '../redux/actions';
+import { startAddPlant } from '../redux/actions'
+import {startSetGardenbook} from '../redux/actions';
 
 class PlantForm extends Component {
 
     render(){
-        // console.log(this.props)
+        console.log(this.props)
         // debugger
         return(
             <form onSubmit={this.props.handleSubmit}>
@@ -36,4 +36,4 @@ class PlantForm extends Component {
 //     }
 // }
 
-export default connect()(PlantForm);
+export default connect(null, {startAddPlant})(PlantForm);

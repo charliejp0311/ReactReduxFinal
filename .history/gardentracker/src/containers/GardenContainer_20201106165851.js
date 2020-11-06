@@ -1,20 +1,22 @@
-import React, {Component} from 'react';
-import { connect } from 'react-redux';
-import PlantForm from "../components/PlantForm";
+import React,{Component} from 'react';
+import {connect} from 'react-redux';
+import  PlantForm  from "../components/PlantForm";
+import  PlantList  from "../components/PlantList";
 import { startAddPlant } from '../redux/actions'
 import {startSetGardenbook} from '../redux/actions';
-class PlantContainer extends Component{
 
-    constructor(props) {
-        super(props);
+
+
+class GardenContainer extends Component{
+    constructor(props){
         // console.log(props)
-        // console.log(this)
+        super(props);
         this.state = {
             name: '',
             description: '',
             gardenbook_id: props.gardenbook_id,
-        };
-    };
+        }
+    }
     handleChange=e=>{
       switch (e.target.name) {
         case 'name':
@@ -46,33 +48,33 @@ class PlantContainer extends Component{
         this.props.startSetGardenbook();
     };
 
-    render(){
-        debugger
-        const {garden} = this.props 
-        const plantId = parseInt(this.props.match.params.id)
-        const plantA = garden.filter(plant=>plant.id === plantId)
-        const plant = plantA[0]
-        return(
-            <div>
-                <h3>{plant.name}</h3>
-                <PlantForm key={plant.id} plant={plant} handleSubmit={this.props.handleSubmit} handleChange={this.props.handleChange} />
-            </div>
 
+    render(){
+        console.log(this)
+        const plant = {}
+        return(
+        <div> 
+            <PlantForm plant={plant} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
+            <PlantList garden={this.props.garden} notes={this.props.notes}/>
+        </div>
         );
     };
 };
 
-const mapStateToProps=state=>{
+const mapStateToProps = state => {
+    // console.log(state)
     return{
-        gardenbook_id: state.garden.id,
+        id: state.garden.id,
         garden: state.garden.garden,
-    };
-};
+        notes: state.garden.notes
+    }
+}
 
 const mapDispatchToProps=dispatch=>{
     return{
         handleChange: ()=>{dispatch(this.props.handleChange())},
-        handleSubmit: ()=>{dispatch(this.props.handleSubmit())}
+        handleSubmit: ()=>{dispatch(this.props.handleSubmit())},
     }
 }
-export default connect(mapStateToProps, {mapDispatchToProps, startAddPlant, startSetGardenbook})(PlantContainer);
+
+export default connect(mapStateToProps,mapDispatchToProps, {startAddPlant, startSetGardenbook})(GardenContainer);

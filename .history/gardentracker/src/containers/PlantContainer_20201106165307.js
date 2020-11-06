@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import PlantForm from "../components/PlantForm";
-import { startAddPlant } from '../redux/actions'
-import {startSetGardenbook} from '../redux/actions';
+
 class PlantContainer extends Component{
 
     constructor(props) {
@@ -75,4 +74,4 @@ const mapDispatchToProps=dispatch=>{
         handleSubmit: ()=>{dispatch(this.props.handleSubmit())}
     }
 }
-export default connect(mapStateToProps, {mapDispatchToProps, startAddPlant, startSetGardenbook})(PlantContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(PlantContainer);

@@ -6,6 +6,7 @@ import HarvestPlant from "./HarvestPlant";
 class PlantList extends Component{
     testHarvest(){
         let plants = []
+        // debugger
         if (this.props.garden) {
             plants = this.props.garden.map(plant=><GardenPlant key={plant.id} plant={plant} />)
         }else{

@@ -28,7 +28,7 @@ class App extends Component {
           <Route exact path='/' render={(props)=><GardenbookContainer {...props} handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>} /> 
           <Route exact path='/garden' render={(props)=><GardenContainer {...props} handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>}/> 
           <Route exact path='/harvest' render={(props)=><HarvestContainer {...props}/>}/>
-          <Route exact path='/plants/:id' render={(props)=><PlantContainer {...props} handleSubmit={this.handleSubmit} handleChange={this.handleChange} />}/>
+          <Route exact path='/plant' render={(props)=><PlantContainer {...props} handleSubmit={this.handleSubmit} handleChange={this.handleChange} />}/>
         </Switch>
       </div>
     );

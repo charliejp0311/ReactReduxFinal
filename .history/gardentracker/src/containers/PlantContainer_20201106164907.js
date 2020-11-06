@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import PlantForm from "../components/PlantForm";
-import { startAddPlant } from '../redux/actions'
-import {startSetGardenbook} from '../redux/actions';
+
 class PlantContainer extends Component{
 
     constructor(props) {
@@ -49,13 +48,17 @@ class PlantContainer extends Component{
     render(){
         debugger
         const {garden} = this.props 
-        const plantId = parseInt(this.props.match.params.id)
-        const plantA = garden.filter(plant=>plant.id === plantId)
-        const plant = plantA[0]
+        // if (this.props.match){
+            const plantId = parseInt(this.props.match.params.id)
+            const plantA = garden.filter(plant=>plant.id === plantId)
+            const plant = plantA[0]
+        // }
+        // console.log(plant)
         return(
             <div>
                 <h3>{plant.name}</h3>
                 <PlantForm key={plant.id} plant={plant} handleSubmit={this.props.handleSubmit} handleChange={this.props.handleChange} />
+                {/* {this.props.plantForm} */}
             </div>
 
         );
@@ -75,4 +78,4 @@ const mapDispatchToProps=dispatch=>{
         handleSubmit: ()=>{dispatch(this.props.handleSubmit())}
     }
 }
-export default connect(mapStateToProps, {mapDispatchToProps, startAddPlant, startSetGardenbook})(PlantContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(PlantContainer);

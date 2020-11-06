@@ -75,4 +75,4 @@ const mapDispatchToProps=dispatch=>{
         handleSubmit: ()=>{dispatch(this.props.handleSubmit())}
     }
 }
-export default connect(mapStateToProps, {mapDispatchToProps, startAddPlant, startSetGardenbook})(PlantContainer);
+export default connect(mapStateToProps, mapDispatchToProps, {startAddPlant, startSetGardenbook})(PlantContainer);
