@@ -20,7 +20,7 @@ class GardenPlant extends Component{
     }
 
     handleDelete=e=>{
-        this.props.startDeletePlant(this.props.plant)
+        this.props.startDeletePlant(this.props.id)
     }
 
     render(){

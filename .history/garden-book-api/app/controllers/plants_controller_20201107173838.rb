@@ -24,7 +24,7 @@ class PlantsController < ApplicationController
     def destroy
         plant = Plant.find_by(id: params[:id])
         gb = plant.gardenbook_id
-        plant.destroy
+        p.destroy
         render json: GardenbookSerializer.new(gb)
     end
 end

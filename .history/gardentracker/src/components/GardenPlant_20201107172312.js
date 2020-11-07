@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { startUpdatePlant } from '../redux/actions'
-import { startDeletePlant } from '../redux/actions'
 import {startSetGardenbook} from '../redux/actions';
 import { Redirect } from "react-router-dom";
 
@@ -20,7 +19,7 @@ class GardenPlant extends Component{
     }
 
     handleDelete=e=>{
-        this.props.startDeletePlant(this.props.plant)
+        debugger
     }
 
     render(){
@@ -39,4 +38,4 @@ class GardenPlant extends Component{
 
 
 
-export default connect(null,{ startUpdatePlant, startSetGardenbook ,startDeletePlant })(GardenPlant);
+export default connect(null,{ startUpdatePlant, startSetGardenbook  })(GardenPlant);

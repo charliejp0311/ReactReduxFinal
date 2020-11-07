@@ -58,7 +58,7 @@ export const startUpdatePlant = (plantData={}) => {
     };
 };
 export const startDeletePlant = (plantData={}) => {
-    // debugger
+    debugger
     const {name,description,gardenbook_id, id, growing} = plantData;
     const plant ={
         id,
@@ -79,7 +79,7 @@ export const startDeletePlant = (plantData={}) => {
     return (dispatch, getState) =>{
         fetch(`http://localhost:3001/plants/${plant.id}`, configObj )
         .then(resp=>resp.json())
-        .then(json=>dispatch(deletePlant(json)))
+        .then(json=>console.log(json))
     };
 };
 

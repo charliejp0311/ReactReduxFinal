@@ -75,11 +75,11 @@ export const startDeletePlant = (plantData={}) => {
         },
         body: JSON.stringify(plant)
     };
-    // debugger
+    debugger
     return (dispatch, getState) =>{
         fetch(`http://localhost:3001/plants/${plant.id}`, configObj )
         .then(resp=>resp.json())
-        .then(json=>dispatch(deletePlant(json)))
+        .then(json=>console.log(json))
     };
 };
 
