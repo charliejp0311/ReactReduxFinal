@@ -1,20 +1,15 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { startUpdatePlant } from '../redux/actions'
-import {startSetGardenbook} from '../redux/actions';
-import { Redirect } from "react-router-dom";
-
 class GardenPlant extends Component{
 
     handleHarvest=e=>{
         const harvestedplant = {
             ...this.props.plant,
             growing: false,
-        };
-        this.props.startUpdatePlant(harvestedplant);
-        this.props.startSetGardenbook();
-        <Redirect to={`/garden/${this.props.plant.gardenbook_id}`} />
+        }
+        console.log(harvestedplant)
+
         // this.props.reapPlant();
     }
 
@@ -40,4 +35,4 @@ class GardenPlant extends Component{
 
 
 
-export default connect(null,{ startUpdatePlant, startSetGardenbook  })(GardenPlant);
+export default connect()(GardenPlant);

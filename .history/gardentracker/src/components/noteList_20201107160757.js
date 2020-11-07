@@ -2,10 +2,6 @@ import React, { Component } from "react";
 
 class NoteList extends Component{
 
-    handleDelete=e=>{
-        debugger
-    }
-
     render(){
         const {notes,action,plant_id} = this.props;
         const plantsNotes = notes.filter(note=>note.plant_id === plant_id)

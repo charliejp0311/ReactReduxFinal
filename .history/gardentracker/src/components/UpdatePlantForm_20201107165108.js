@@ -1,7 +1,9 @@
 import React,{Component} from "react";
 import { connect } from "react-redux";
-import { startUpdatePlant } from '../redux/actions'
+import { startUpdatePlant } from '../redux/actions';
 import {startSetGardenbook} from '../redux/actions';
+import { Redirect } from "react-router-dom";
+
 
 class UpdatePlantForm extends Component {
     constructor(props){
@@ -38,7 +40,7 @@ class UpdatePlantForm extends Component {
     handleSubmit=e=>{
         e.preventDefault();
         this.props.startUpdatePlant(this.state);
-        this.props.startSetGardenbook();
+        <Redirect to={`/garden/${this.state.gardenbook_id}`} />
         
     };
 

@@ -38,7 +38,7 @@ class UpdatePlantForm extends Component {
     handleSubmit=e=>{
         e.preventDefault();
         this.props.startUpdatePlant(this.state);
-        this.props.startSetGardenbook();
+        
         
     };
 

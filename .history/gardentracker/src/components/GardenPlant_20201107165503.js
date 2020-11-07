@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { startUpdatePlant } from '../redux/actions'
 import {startSetGardenbook} from '../redux/actions';
-import { Redirect } from "react-router-dom";
+
 
 class GardenPlant extends Component{
 
@@ -14,7 +14,6 @@ class GardenPlant extends Component{
         };
         this.props.startUpdatePlant(harvestedplant);
         this.props.startSetGardenbook();
-        <Redirect to={`/garden/${this.props.plant.gardenbook_id}`} />
         // this.props.reapPlant();
     }
 
