@@ -6,10 +6,11 @@ import  PlantList  from "../components/PlantList";
 class GardenContainer extends Component{
 
     render(){
+        console.log(this)
         const plant = {}
         return(
         <div> 
-            <PlantForm plant={plant} gardenbook_id={this.props.id} />
+            <PlantForm plant={plant} />
             <PlantList garden={this.props.garden} notes={this.props.notes}/>
         </div>
         );

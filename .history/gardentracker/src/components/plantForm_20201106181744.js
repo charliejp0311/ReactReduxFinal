@@ -42,7 +42,7 @@ class PlantForm extends Component {
         this.props.startSetGardenbook();
     };
     render(){
-        // console.log(this.props)
+        console.log(this.props)
         // debugger
         return(
             <form onSubmit={this.handleSubmit}>

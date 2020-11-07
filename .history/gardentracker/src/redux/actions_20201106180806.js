@@ -9,7 +9,7 @@ export const startSetGardenbook = () => {
 };
 
 export const startAddPlant = (plantData={}) => {
-    // debugger
+    debugger
     const {name,description,gardenbook_id} = plantData;
     const plant ={
         name,

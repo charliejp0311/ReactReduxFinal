@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import UpdatePlantForm from "../components/UpdatePlantForm";
+import PlantForm from "../components/PlantForm";
 import { startAddPlant } from '../redux/actions'
 import {startSetGardenbook} from '../redux/actions';
 class PlantContainer extends Component{
@@ -55,7 +55,7 @@ class PlantContainer extends Component{
         return(
             <div>
                 <h3>{plant.name}</h3>
-                <UpdatePlantForm plant={plant} />
+                
             </div>
 
         );

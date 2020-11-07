@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import UpdatePlantForm from "../components/UpdatePlantForm";
+import PlantForm from "../components/PlantForm";
 import { startAddPlant } from '../redux/actions'
 import {startSetGardenbook} from '../redux/actions';
 class PlantContainer extends Component{
@@ -47,7 +47,7 @@ class PlantContainer extends Component{
     };
 
     render(){
-        // debugger
+        debugger
         const {garden} = this.props 
         const plantId = parseInt(this.props.match.params.id)
         const plantA = garden.filter(plant=>plant.id === plantId)
@@ -55,7 +55,7 @@ class PlantContainer extends Component{
         return(
             <div>
                 <h3>{plant.name}</h3>
-                <UpdatePlantForm plant={plant} />
+                <PlantForm key={plant.id} plant={plant} handleSubmit={this.props.handleSubmit} handleChange={this.props.handleChange} />
             </div>
 
         );

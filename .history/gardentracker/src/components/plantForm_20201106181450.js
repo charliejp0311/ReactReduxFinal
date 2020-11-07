@@ -10,6 +10,7 @@ class PlantForm extends Component {
         this.state = {
             name: '',
             description: '',
+            gardenbook_id: `${props.gardenbook_id}`,
         }
     }
     handleChange=e=>{
@@ -33,7 +34,7 @@ class PlantForm extends Component {
 
     handleSubmit=e=>{
         e.preventDefault();
-        this.props.startAddPlant({...this.state, gardenbook_id: this.props.gardenbook_id})
+        this.props.startAddPlant(this.state)
         this.setState({
             ...this.state,
             name: "", 
@@ -42,7 +43,7 @@ class PlantForm extends Component {
         this.props.startSetGardenbook();
     };
     render(){
-        // console.log(this.props)
+        console.log(this.props)
         // debugger
         return(
             <form onSubmit={this.handleSubmit}>

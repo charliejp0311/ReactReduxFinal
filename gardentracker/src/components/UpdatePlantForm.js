@@ -3,13 +3,13 @@ import { connect } from "react-redux";
 import { startAddPlant } from '../redux/actions'
 import {startSetGardenbook} from '../redux/actions';
 
-class PlantForm extends Component {
+class UpdatePlantForm extends Component {
     constructor(props){
         console.log(props)
         super(props);
         this.state = {
-            name: '',
-            description: '',
+            name: props.plant.name,
+            description: props.plant.description,
         }
     }
     handleChange=e=>{
@@ -61,4 +61,4 @@ class PlantForm extends Component {
 };
 
 
-export default connect(null,{startAddPlant, startSetGardenbook})(PlantForm);
+export default connect(null,{startAddPlant, startSetGardenbook})(UpdatePlantForm);

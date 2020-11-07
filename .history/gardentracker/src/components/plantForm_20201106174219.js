@@ -5,11 +5,12 @@ import {startSetGardenbook} from '../redux/actions';
 
 class PlantForm extends Component {
     constructor(props){
-        console.log(props)
+        // console.log(props)
         super(props);
         this.state = {
             name: '',
             description: '',
+            gardenbook_id: props.gardenbook_id,
         }
     }
     handleChange=e=>{
@@ -33,7 +34,8 @@ class PlantForm extends Component {
 
     handleSubmit=e=>{
         e.preventDefault();
-        this.props.startAddPlant({...this.state, gardenbook_id: this.props.gardenbook_id})
+        debugger
+        this.props.startAddPlant(this.state)
         this.setState({
             ...this.state,
             name: "", 
@@ -45,7 +47,7 @@ class PlantForm extends Component {
         // console.log(this.props)
         // debugger
         return(
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.props.handleSubmit}>
                 <label htmlFor='name' >
                     Name:
                     <input type='text' name='name' onChange={this.handleChange} value={this.state.name}/>
