@@ -32,7 +32,10 @@ class NoteForm extends Component{
             actionId: actionId,
             note: noteText,
         });
-        e.target.parentElement.firstElementChild.value = "";
+        return {
+            ...this.state,
+            note: "",
+        };
     };
 
     handleChange=e=>{

@@ -9,8 +9,8 @@ class NoteList extends Component{
         const actionByNoteComplex = actionIds.map(id=>{return(action.filter(a=>a.id===id))})
         const actionByNote = actionByNoteComplex.flat()
         const listArray = []
-        for (let i = 0; i < plantsNotes.length; i++) {
-            const note = plantsNotes[i].note;
+        for (let i = 0; i < plantNotes.length; i++) {
+            const note = plantNotes[i].note;
             const action = actionByNote[i].name;
             listArray.push(<li key={plantsNotes[i].id} ><h6>{action}</h6><p>{note}</p></li>)
         }

@@ -8,20 +8,11 @@ class NoteList extends Component{
         const actionIds = plantsNotes.map(note=>{return(note.action_id)})
         const actionByNoteComplex = actionIds.map(id=>{return(action.filter(a=>a.id===id))})
         const actionByNote = actionByNoteComplex.flat()
-        const listArray = []
-        for (let i = 0; i < plantsNotes.length; i++) {
-            const note = plantsNotes[i].note;
-            const action = actionByNote[i].name;
-            listArray.push(<li key={plantsNotes[i].id} ><h6>{action}</h6><p>{note}</p></li>)
-        }
+        console.log(actionByNote)
         // console.log(plantsNotes)
         // console.log(action)
         return(
-            <div>
-                <ul className='notes'>
-                    {listArray}
-                </ul>
-            </div>
+            <div>list of notes</div>
         );
     };
 };
