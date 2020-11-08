@@ -79,7 +79,7 @@ export const startDeletePlant = (plantData={}) => {
     return (dispatch, getState) =>{
         fetch(`http://localhost:3001/plants/${plant.id}`, configObj )
         .then(resp=>resp.json())
-        .then(json=>dispatch(deletePlant(json)))
+        .then(json=>console.log(json))
     };
 };
 
@@ -124,7 +124,7 @@ export const updatePlant = (plant) =>{
     return {type: 'UPDATE_PLANT',plant}
 }
 export const deletePlant = (plant) => {
-    // debugger
+    debugger
     return {type: 'DELETE_PLANT',plant}
 }
 export const harvestPlant = (plant) => {

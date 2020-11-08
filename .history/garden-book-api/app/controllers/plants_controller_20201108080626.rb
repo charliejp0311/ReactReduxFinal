@@ -26,9 +26,6 @@ class PlantsController < ApplicationController
         gb_id = plant.gardenbook_id
         plant.destroy
         gb = Gardenbook.find_by(id: gb_id)
-        options = {
-            include: [:plants]
-        }
-        render json: GardenbookSerializer.new(gb,options)
+        render json: GardenbookSerializer.new(gb)
     end
 end

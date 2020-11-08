@@ -70,23 +70,19 @@ export default function garden (state = {
             };
 
         case 'DELETE_PLANT':
-            // debugger
-            const plants = action.plant.included;
-            const freshGarden = plants.filter(plant=>plant.attributes.growing ? plant.attributes : null)
-            
+            debugger
             return {
                 ...state,
-                garden: freshGarden.flat(),
             };
 
-        case 'HARVEST_PLANT':
-            let p = state.plants.filter(plant=>plant.name===action.plant.name) ;
-            let inTheGarden = state.plants.filter(plant=>plant.name!==action.plant.name);
-            return{
-                ...state,
-                plants: inTheGarden,
-                harvest: state.harvest.concat(p),
-            };
+        // case 'HARVEST_PLANT':
+        //     let p = state.plants.filter(plant=>plant.name===action.plant.name) ;
+        //     let inTheGarden = state.plants.filter(plant=>plant.name!==action.plant.name);
+        //     return{
+        //         ...state,
+        //         plants: inTheGarden,
+        //         harvest: state.harvest.concat(p),
+        //     };
     
         default:
             return state;

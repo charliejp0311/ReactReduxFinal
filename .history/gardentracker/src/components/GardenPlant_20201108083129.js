@@ -20,7 +20,6 @@ class GardenPlant extends Component{
     }
 
     handleDelete=e=>{
-        // debugger
         this.props.startDeletePlant(this.props.plant)
         this.props.startSetGardenbook();
         <Redirect to={`/garden/${this.props.plant.gardenbook_id}`} />;

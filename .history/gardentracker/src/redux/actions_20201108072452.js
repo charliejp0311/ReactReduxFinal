@@ -124,7 +124,7 @@ export const updatePlant = (plant) =>{
     return {type: 'UPDATE_PLANT',plant}
 }
 export const deletePlant = (plant) => {
-    // debugger
+    debugger
     return {type: 'DELETE_PLANT',plant}
 }
 export const harvestPlant = (plant) => {

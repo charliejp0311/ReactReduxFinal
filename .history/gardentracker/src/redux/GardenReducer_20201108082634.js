@@ -72,7 +72,7 @@ export default function garden (state = {
         case 'DELETE_PLANT':
             // debugger
             const plants = action.plant.included;
-            const freshGarden = plants.filter(plant=>plant.attributes.growing ? plant.attributes : null)
+            const freshGarden = plants.filter(plant=>plant.attributes.growing ? plant : null)
             
             return {
                 ...state,
