@@ -83,26 +83,6 @@ export const startDeletePlant = (plantData={}) => {
         .then(json=>dispatch(deletePlant(json)))
     };
 };
-export const startDeleteNote = (id = '') => {
-    // debugger
-    const note = {
-        id: id,
-    }
-    let configObj = {
-        method: "DELETE",
-        headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-        },
-        body: JSON.stringify(note),
-    };
-    // debugger
-    return (dispatch, getState) =>{
-        fetch(`http://localhost:3001/notes/${note.id}`, configObj )
-        .then(resp=>resp.json())
-        .then(json=>dispatch(deleteNote(json)))
-    };
-};
 
 export const startAddNote = (noteData={}) => {
     // debugger

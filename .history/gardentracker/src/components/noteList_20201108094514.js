@@ -2,15 +2,14 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { startDeleteNote } from '../redux/actions'
 import {startSetGardenbook} from '../redux/actions';
-import { Redirect } from "react-router-dom";
 
 class NoteList extends Component{
 
     handleDelete=e=>{
         this.props.startDeleteNote(parseInt(e.target.id))
         this.props.startSetGardenbook();
-        // debugger
-        <Redirect to={`/plants/${this.props.plant_id}`} />;
+        debugger
+        // <Redirect to={`/garden/${this.props.plant.gardenbook_id}`} />;
     }
     
 

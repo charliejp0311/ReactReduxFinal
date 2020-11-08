@@ -26,7 +26,7 @@ class NotesController < ApplicationController
         note.destroy
         gb = Gardenbook.find_by(id: gb_id)
         options = {
-            include: [:notes]
+            include: [:action]
         }
         render json: GardenbookSerializer.new(gb,options)
     end

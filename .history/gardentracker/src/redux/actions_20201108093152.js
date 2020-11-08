@@ -96,11 +96,11 @@ export const startDeleteNote = (id = '') => {
         },
         body: JSON.stringify(note),
     };
-    // debugger
+    debugger
     return (dispatch, getState) =>{
         fetch(`http://localhost:3001/notes/${note.id}`, configObj )
         .then(resp=>resp.json())
-        .then(json=>dispatch(deleteNote(json)))
+        .then(json=>console.log(json))
     };
 };
 

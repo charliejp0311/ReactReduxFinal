@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import {Link} from 'react-router-dom';
 
 class HarvestPlant extends Component{
-
+    handleShow=e=>{
+        debugger
+    }
     render(){
         const {plant} = this.props
         return(

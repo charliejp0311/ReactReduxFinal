@@ -1,16 +1,16 @@
 import React, { Component } from "react";
-import {Link} from 'react-router-dom';
 
 class HarvestPlant extends Component{
-
+    handleShow=e=>{
+        debugger
+    }
     render(){
         const {plant} = this.props
         return(
             <div>
                 <h3>{plant.name}</h3>
                 <p>{plant.description}</p>
-                <Link to={`/harvested_plant/${plant.id}`}>Show</Link>
-                
+                <button id={plant.id} onClick={this.handleShow}>Show</button>
             </div>
         );
     };

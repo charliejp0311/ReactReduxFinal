@@ -15,11 +15,10 @@ class App extends Component {
 
   componentDidMount(){
     this.props.startSetGardenbook();
-    
   };
 
   render(){
-    console.log(this.state)
+    console.log(this.props)
     return (
       <div className="App">
           <header className="App-header">
@@ -37,9 +36,5 @@ class App extends Component {
     );
   };
 }
-// const mapStateToProps=state=>{
-//   return{
-//     harvest: state.garden.harvest
-//   }
-// }
+
 export default connect(null, {startSetGardenbook})(App);

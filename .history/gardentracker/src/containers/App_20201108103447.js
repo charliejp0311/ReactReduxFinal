@@ -15,31 +15,26 @@ class App extends Component {
 
   componentDidMount(){
     this.props.startSetGardenbook();
-    
   };
 
   render(){
-    console.log(this.state)
+    // console.log(this.props)
     return (
       <div className="App">
           <header className="App-header">
             The Garden Tracker
           </header>
           <NavBar />
-          <Switch>
-            <Route exact path='/' render={(props)=><GardenbookContainer {...props} />} /> 
-            <Route exact path='/garden' render={(props)=><GardenContainer {...props} />}/> 
-            <Route exact path='/harvest' render={(props)=><HarvestContainer {...props}/>}/>
-            <Route exact path='/plants/:id' render={(props)=><PlantContainer {...props}  />}/>
-            <Route exact path='/harvested_plant/:id' render={props=><HarvestedPlant {...props} />} />
-          </Switch>
+        <Switch>
+          <Route exact path='/' render={(props)=><GardenbookContainer {...props} />} /> 
+          <Route exact path='/garden' render={(props)=><GardenContainer {...props} />}/> 
+          <Route exact path='/harvest' render={(props)=><HarvestContainer {...props}/>}/>
+          <Route exact path='/plants/:id' render={(props)=><PlantContainer {...props}  />}/>
+          <Route exact path='/harvested_plant/:id' render={props=><HarvestedPlant {...props} />} />
+        </Switch>
       </div>
     );
   };
 }
-// const mapStateToProps=state=>{
-//   return{
-//     harvest: state.garden.harvest
-//   }
-// }
+
 export default connect(null, {startSetGardenbook})(App);

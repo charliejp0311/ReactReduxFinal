@@ -11,7 +11,7 @@ class NotesController < ApplicationController
         render json: NoteSerializer.new(n)
     end
     def create
-
+        # byebug
         note = Note.create(action_id: params[:action_id], plant_id: params[:plant_id], gardenbook_id: params[:gardenbook_id], note: params[:note] )
        
         notes = Note.all
@@ -21,13 +21,12 @@ class NotesController < ApplicationController
         render json: NoteSerializer.new(notes,options)
     end
     def destroy
-        note = Note.find_by(id: params[:id])
-        gb_id = note.gardenbook_id
+        note = Note.find_by(id: params[:note_id])
         note.destroy
-        gb = Gardenbook.find_by(id: gb_id)
+        notes = Note.all
         options = {
-            include: [:notes]
+            include: [:action]
         }
-        render json: GardenbookSerializer.new(gb,options)
+        render json: NoteSerializer.new(notes,options)
     end
 end

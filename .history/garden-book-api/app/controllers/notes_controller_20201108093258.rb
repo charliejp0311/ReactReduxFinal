@@ -22,12 +22,11 @@ class NotesController < ApplicationController
     end
     def destroy
         note = Note.find_by(id: params[:id])
-        gb_id = note.gardenbook_id
         note.destroy
-        gb = Gardenbook.find_by(id: gb_id)
+        notes = Note.all
         options = {
-            include: [:notes]
+            include: [:action]
         }
-        render json: GardenbookSerializer.new(gb,options)
+        render json: NoteSerializer.new(notes,options)
     end
 end

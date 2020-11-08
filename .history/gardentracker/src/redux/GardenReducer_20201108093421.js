@@ -5,6 +5,7 @@ export default function garden (state = {
     notes: [],
     actions: []
 },action){
+    // debugger
     switch (action.type) {
         case 'SET_GARDENBOOK':
             let parts = action.book.included
@@ -42,6 +43,7 @@ export default function garden (state = {
             };
 
         case 'ADD_PLANT':
+            // debugger
             return {
                 ...state,
                 garden: state.garden.concat({name: action.plant.name})
@@ -68,6 +70,7 @@ export default function garden (state = {
             };
 
         case 'DELETE_PLANT':
+            // debugger
             const plants = action.plant.included;
             const freshGarden = plants.filter(plant=>plant.attributes.growing ? plant.attributes : null)
             
@@ -76,12 +79,13 @@ export default function garden (state = {
                 garden: freshGarden.flat(),
             };
         case 'DELETE_NOTE':
-            const allNotes = action.note.included;
-            const ns = allNotes.map(note=>{return(note.attributes)});
+            debugger
+            // const plants = action.plant.included;
+            // const freshGarden = plants.filter(plant=>plant.attributes.growing ? plant.attributes : null)
             
             return {
                 ...state,
-                notes: ns,
+                // garden: freshGarden.flat(),
             };
 
         case 'HARVEST_PLANT':
@@ -95,5 +99,5 @@ export default function garden (state = {
     
         default:
             return state;
-    };
+    }
 };
