@@ -36,5 +36,9 @@ class App extends Component {
     );
   };
 }
-
+// const mapStateToProps=state=>{
+//   return{
+//     harvest: state.garden.harvest
+//   }
+// }
 export default connect(null, {startSetGardenbook})(App);
