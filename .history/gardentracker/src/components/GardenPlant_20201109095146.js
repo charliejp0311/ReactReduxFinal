@@ -29,7 +29,7 @@ class GardenPlant extends Component{
     render(){
         // const {plant} = this.props
         return(
-            <div >
+            <div>
                 <h3>{this.props.plant.name}</h3>
                 <p>{this.props.plant.description}</p>
                 <Link to={`/plants/${this.props.plant.id}`} >Update</Link><br />

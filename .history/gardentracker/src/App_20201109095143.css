@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #1b7531;
+  background-color: #282c34;
   min-height: 15vh;
   display: flex;
   flex-direction: column;
@@ -24,13 +24,8 @@
   color: white;
 }
 
-ul {
-  list-style: none;
-}
-
-
 .App-link {
-  color: #beebf8;
+  color: #61dafb;
 }
 
 .garden {
@@ -42,28 +37,13 @@ ul {
   padding-bottom: 30px;
 }
 
-.plant {
+/* .plant {
   height: auto;
   width: auto; 
   box-shadow: 10px 10px grey;
   padding: 10px;
   border-radius: 10px;
-} 
-
-.navBar a:link,
-.navBar a:visited {
-  background-color: #88e73b;
-  color: white;
-  padding: 7px 12px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.navBar a:hover,
-.navBar a:active {
-  background-color: #1b7531;
-}
+} */
 
 @keyframes App-logo-spin {
   from {

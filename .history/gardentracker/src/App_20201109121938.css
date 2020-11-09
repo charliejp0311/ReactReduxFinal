@@ -24,9 +24,6 @@
   color: white;
 }
 
-ul {
-  list-style: none;
-}
 
 
 .App-link {
@@ -50,9 +47,9 @@ ul {
   border-radius: 10px;
 } 
 
-.navBar a:link,
-.navBar a:visited {
-  background-color: #88e73b;
+a:link,
+a:visited {
+  background-color: #f44336;
   color: white;
   padding: 7px 12px;
   text-align: center;
@@ -60,9 +57,9 @@ ul {
   display: inline-block;
 }
 
-.navBar a:hover,
-.navBar a:active {
-  background-color: #1b7531;
+a:hover,
+a:active {
+  background-color: red;
 }
 
 @keyframes App-logo-spin {
