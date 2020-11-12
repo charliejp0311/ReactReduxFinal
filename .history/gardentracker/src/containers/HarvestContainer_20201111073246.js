@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import  PlantList  from "../components/PlantList";
-import {SideNav} from '../components/sideNav'
+
 
 
 class HarvestContainer extends Component{
@@ -10,7 +10,6 @@ class HarvestContainer extends Component{
 
         return(
         <div className='harvest'> 
-            {this.props.SideNav(this.props.harvest)}
             <PlantList harvest={this.props.harvest} notes={this.props.notes}/>
         </div>
         );
@@ -25,4 +24,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, {SideNav})(HarvestContainer);
+export default connect(mapStateToProps)(HarvestContainer);

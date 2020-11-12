@@ -1,7 +1,6 @@
 .App {
   text-align: center;
   transition: margin-left .5s;
-  background-color: #1b7531;
 }
 
 .App-logo {
@@ -16,7 +15,7 @@
 } */
 
 .App-header {
-  position: relative;
+  position: absolute;
   background-color: #1b7531;
   min-height: 15vh;
   display: flex;
@@ -26,20 +25,10 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.garden,
-.harvest {
-  column-count: auto;
-  margin-left: 15%;
-  background-color: whitesmoke;
-
-}
-.garden-book , .plant{
-  background-color: whitesmoke;
-}
 .sidenav {
   display: inline-block;
-  /* border-top: 2px solid black; */
-  height: auto;
+  border-top: 2px solid black;
+  height: 100%;
   width: 15%;
   position: fixed;
   z-index: 1;
@@ -92,7 +81,11 @@ ul {
   list-style: none;
 }
 
+.garden div {
+  column-count: auto;
+  padding: 20px;
 
+}
 .App-link {
   color: #beebf8;
 }
@@ -114,8 +107,8 @@ ul {
   border-radius: 10px;
 } 
 .navBar {
-  position: relative;
-  /* border-bottom: 2px solid black; */
+  position: absolute;
+  border-bottom: 2px solid black;
   padding-bottom: 10px;
   margin-bottom: 12px;
   background: #1b7531;

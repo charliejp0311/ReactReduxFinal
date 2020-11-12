@@ -57,7 +57,7 @@ class PlantContainer extends Component{
         const plant = plantA[0]
         const note = {}
         return(
-            <div className='plant'>
+            <div >
                 <h3>{plant.name}</h3>
                 <UpdatePlantForm plant={plant} gardenbook_id={this.props.gardenbook_id} />
                 <p>Track your plants progress make a note:</p>

@@ -12,7 +12,6 @@ class GardenContainer extends Component{
         return(
         <div className='garden'> 
             {/* <SideNav key={this.props.id} /> */}
-            {this.props.SideNav(this.props.garden)}
             <PlantForm plant={plant} gardenbook_id={this.props.id} />
             <PlantList garden={this.props.garden} notes={this.props.notes}/>
         </div>

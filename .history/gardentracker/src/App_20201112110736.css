@@ -26,20 +26,10 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.garden,
-.harvest {
-  column-count: auto;
-  margin-left: 15%;
-  background-color: whitesmoke;
-
-}
-.garden-book , .plant{
-  background-color: whitesmoke;
-}
-.sidenav {
+.sidenav div{
   display: inline-block;
-  /* border-top: 2px solid black; */
-  height: auto;
+  border-top: 2px solid black;
+  height: 100%;
   width: 15%;
   position: fixed;
   z-index: 1;
@@ -92,7 +82,12 @@ ul {
   list-style: none;
 }
 
+.garden,.harvest div {
+  column-count: auto;
+  padding: 20px;
+  background-color: #beebf8;
 
+}
 .App-link {
   color: #beebf8;
 }
@@ -115,7 +110,7 @@ ul {
 } 
 .navBar {
   position: relative;
-  /* border-bottom: 2px solid black; */
+  border-bottom: 2px solid black;
   padding-bottom: 10px;
   margin-bottom: 12px;
   background: #1b7531;

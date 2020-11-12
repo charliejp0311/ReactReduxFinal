@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import  PlantForm  from "../components/PlantForm";
 import  PlantList  from "../components/PlantList";
-import {SideNav} from '../components/sideNav'
+import SideNav from '../components/sideNav'
 
 
 class GardenContainer extends Component{
@@ -11,8 +11,7 @@ class GardenContainer extends Component{
         const plant = {}
         return(
         <div className='garden'> 
-            {/* <SideNav key={this.props.id} /> */}
-            {this.props.SideNav(this.props.garden)}
+            <SideNav plantList={this.props.garden} />
             <PlantForm plant={plant} gardenbook_id={this.props.id} />
             <PlantList garden={this.props.garden} notes={this.props.notes}/>
         </div>
@@ -28,4 +27,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps,{SideNav})(GardenContainer);
+export default connect(mapStateToProps)(GardenContainer);

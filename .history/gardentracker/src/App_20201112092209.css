@@ -1,0 +1,98 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #1b7531;
+  min-height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.sidenav {
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  left: 0;
+  background-color: #111;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
+}
+
+ul {
+  list-style: none;
+}
+
+.garden div {
+  column-count: auto;
+}
+.App-link {
+  color: #beebf8;
+}
+
+.garden {
+  display: grid;
+  grid-template-columns: 3fr;
+  grid-template-rows: auto;
+  grid-gap: 25px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.plant {
+  height: auto;
+  width: auto; 
+  box-shadow: 10px 10px grey;
+  padding: 10px;
+  border-radius: 10px;
+} 
+
+.navBar a:link,
+.navBar a:visited {
+  background-color: #88e73b;
+  color: white;
+  padding: 7px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.navBar a:hover,
+.navBar a:active {
+  background-color: #1b7531;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

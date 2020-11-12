@@ -10,7 +10,7 @@ class GardenbookContainer extends Component{
         let harvested = this.props.harvest.map(p=>{return(<li key={p.id}>{p.name}</li>)})
 
         return(
-        <div className='garden-book'> 
+        <div className='garden'> 
             <div>  
                 <h3>Growing:</h3>         
                 <ul>{inGarden}</ul>
