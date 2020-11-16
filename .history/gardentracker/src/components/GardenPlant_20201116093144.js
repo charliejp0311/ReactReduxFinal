@@ -16,12 +16,14 @@ class GardenPlant extends Component{
         this.props.startUpdatePlant(harvestedplant);
         this.props.startSetGardenbook();
         <Redirect to={`/garden/${this.props.plant.gardenbook_id}`} />;
+        // this.props.reapPlant();
     }
 
     handleDelete=e=>{
         // debugger
         this.props.startDeletePlant(this.props.plant)
         this.props.startSetGardenbook();
+        // <Redirect to={`/garden/${this.props.plant.gardenbook_id}`} />;
     }
 
     render(){
