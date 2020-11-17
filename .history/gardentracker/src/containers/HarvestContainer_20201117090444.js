@@ -7,7 +7,7 @@ import {SideNav} from '../components/sideNav'
 class HarvestContainer extends Component{
 
     render(){
-        // console.log(this.props.harvest)
+        console.log(this.props.harvest)
         return(
         <div className='harvest'> 
             {this.props.SideNav(this.props.harvest)} 

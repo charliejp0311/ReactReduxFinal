@@ -50,6 +50,7 @@ class PlantContainer extends Component{
     };
 
     render(){
+        debugger
         const {garden} = this.props 
         const plantId = parseInt(this.props.match.params.id)
         const plantA = garden.filter(plant=>plant.id === plantId)

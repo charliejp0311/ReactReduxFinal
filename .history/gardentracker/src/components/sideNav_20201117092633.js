@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const SideNav=(pl)=>{
     let linkList = [] 
+    debugger
     if (pl[0].growing) {
         linkList = pl.map(plant=>{return(<Link to={`/plants/${plant.id}`} >{plant.name}</Link>)}) 
     }else{

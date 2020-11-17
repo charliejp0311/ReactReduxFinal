@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
-// import IncrimmentButton from "../components/IncrimmentButton";
+import { IncrimmentButton } from "../components/incrimmentButton";
 
 
 
@@ -20,7 +20,7 @@ class GardenbookContainer extends Component{
                 <h3>Harvested:</h3>         
                 <ul>{harvested}</ul>
             </div>
-            {/* <IncrimmentButton /> */}
+            <IncrimmentButton />
         </div>
         );
     };

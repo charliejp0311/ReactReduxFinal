@@ -50,6 +50,7 @@ class PlantContainer extends Component{
     };
 
     render(){
+        debugger
         const {garden} = this.props 
         const plantId = parseInt(this.props.match.params.id)
         const plantA = garden.filter(plant=>plant.id === plantId)
@@ -74,7 +75,6 @@ const mapStateToProps=state=>{
     return{
         gardenbook_id: state.garden.id,
         garden: state.garden.garden,
-        harvest: state.garden.harvest,
         notes: state.garden.notes,
         actions: state.garden.actions,
     };
